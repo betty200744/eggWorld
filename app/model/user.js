@@ -7,7 +7,7 @@ module.exports = app => {
   const { STRING, INTEGER, DATE } = app.Sequelize;
   const User = app.model.define('user', {
     username: { type: STRING, unique: true },
-    password: { type: STRING, unique: true },
+    password: { type: STRING},
     email: { type: STRING, validate: { isEmail: true }},
   },
   {

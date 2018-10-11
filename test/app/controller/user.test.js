@@ -6,6 +6,7 @@
 const { app, assert } = require('egg-mock/bootstrap');
 const moment = require('moment');
 const clearAll = require('../../clearAll');
+const {expect} = require('chai');
 
 describe('app/controler/user.test.js', async () => {
   beforeEach(async () => {
@@ -24,7 +25,7 @@ describe('app/controler/user.test.js', async () => {
       .post('/graphql')
       .send({query})
       .expect(200);
-    assert(result.body.data === {username: 'betty'});
+    expect(result.body.data.userInfo).to.have.property('username', 'betty');
   });
 
   it('should get a ctx', async () => {

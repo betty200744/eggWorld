@@ -5,6 +5,8 @@
   "private": true,
   "dependencies": {
     "bluebird": "^3.5.2",
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
     "egg": "^2.2.1",
     "egg-cors": "^2.1.1",
     "egg-graphql": "^2.2.0",
@@ -44,8 +46,10 @@
     "ci": "npm run lint && npm run cov",
     "autod": "autod",
     "migrate:new": "sequelize migration:create",
-    "migrate:up": "sequelize db:migrate --env=test",
-    "migrate:down": "sequelize db:migrate:undo"
+    "migrate:up:test": "sequelize db:migrate --env=test",
+    "migrate:down:test": "sequelize db:migrate:undo --env=test",
+    "migrate:up": "sequelize db:migrate --env=development",
+    "migrate:down": "sequelize db:migrate:undo --env=development"
   },
   "ci": {
     "version": "8"

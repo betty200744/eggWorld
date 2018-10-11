@@ -3,6 +3,7 @@
  */
 'use strict';
 
-module.exports = () => {
-
+module.exports = (ctx, next) => {
+  console.log(ctx.query);
+  next();
 };
