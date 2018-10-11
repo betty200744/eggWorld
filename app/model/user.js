@@ -3,9 +3,9 @@
  */
 'use strict';
 
-module.exports = app => {
-  const { STRING, INTEGER, DATE } = app.Sequelize;
-  const User = app.model.define('user', {
+module.exports = (sequelize, DataTypes) => {
+  const { DATE, STRING, INTEGER, FLOAT } = DataTypes;
+  const User = sequelize.define('user', {
     username: { type: STRING, unique: true },
     password: { type: STRING},
     email: { type: STRING, validate: { isEmail: true }},

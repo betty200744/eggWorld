@@ -2,11 +2,12 @@
  * Created by betty on 10/10/18.
  */
 "use strict";
-
-const { app, assert } = require('egg-mock/bootstrap');
 const moment = require('moment');
-const clearAll = require('../../clearAll');
 const {expect} = require('chai');
+const { app, assert } = require('egg-mock/bootstrap');
+
+const db = require('../../../app/model');
+const clearAll = require('../../clearAll');
 
 describe('app/controler/user.test.js', async () => {
   beforeEach(async () => {
@@ -20,7 +21,7 @@ describe('app/controler/user.test.js', async () => {
   }
 }`;
 
-    await app.model.User.create({username: 'betty', password: '123456', updatedAt: Date()});
+    await db.user.create({username: 'betty', password: '123456', updatedAt: Date()});
     const result = await app.httpRequest()
       .post('/graphql')
       .send({query})
