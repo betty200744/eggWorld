@@ -7,6 +7,9 @@ const Service = require('egg').Service;
 const Promise = require('bluebird');
 const rp = require('request-promise');
 
+/**
+ * can use for restful and graphql
+ */
 class NewsService extends Service {
   async list() {
     const { serverUrl } = this.config.news;

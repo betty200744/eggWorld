@@ -60,4 +60,14 @@ app
 - redis
 - mysql
 
+## 项目功能
+- 首页， hackerNewsList， graphql, model, testcase, resolver, service 
+- 首页， 登录， login,  graphql, model, testcase, resolver, service, 
+- 首页，注册, register,  graphql, model, testcase, resolver, service, 
+- 个人, userInfo,  graphql, model, testcase, resolver, service, 
+- 我的收藏， favoritesNews,  graphql, model, testcase, resolver, service, 
+- 定时任务, 定时抓取hacker news , 定时写入数据,  graphql, model, testcase, resolver, service, 
+- 
+
+
 

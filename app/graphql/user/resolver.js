@@ -3,6 +3,9 @@
  */
 'use strict';
 
+/**
+ * resolver like controller , only use ctx.service
+ */
 const resolver = {
   Query: {
     userInfo(root, _, ctx) {

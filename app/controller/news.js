@@ -3,6 +3,10 @@
  */
 'use strict';
 
+
+/**
+ * this Controller is only for restful api
+ */
 const Controller = require('egg').Controller;
 
 class NewsController extends Controller {

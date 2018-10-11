@@ -5,9 +5,10 @@ type Query {
     login(phone: String!, password: String!): String
     # 文章详情
     reviewDetail (id: ID): Review
-    # 文章列表
+    # news列表
     reviewList(id: [ID]): [Review]
-    # 收藏文章
+    # 收藏news
     favoriteReviews(uid: ID): [Review]
+
 }
 

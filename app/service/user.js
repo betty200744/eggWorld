@@ -6,9 +6,17 @@
 const Service = require('egg').Service;
 const db = require('../model');
 
+/**
+ * can use for restful and graphql
+ */
 class UserService extends Service {
   async userInfo() {
     return db.user.findOne();
+  }
+
+  async register(data) {
+    await db.user.create(data);
+    return true;
   }
 }
 
