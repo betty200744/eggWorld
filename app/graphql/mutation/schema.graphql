@@ -1,0 +1,6 @@
+type Mutation {
+    # 注册
+    register(body: Register!): Boolean
+    # 收藏
+    favorite(reviewId: ID): Boolean
+}

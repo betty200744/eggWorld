@@ -1,0 +1,10 @@
+type UserInfo{
+    username: String
+}
+
+input Register {
+    # 用户名
+    username: String!
+    # 密码
+    password: String!
+}

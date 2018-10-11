@@ -1,0 +1,13 @@
+type Query {
+    # user
+    userInfo: UserInfo
+    # 登录
+    login(phone: String!, password: String!): String
+    # 文章详情
+    reviewDetail (id: ID): Review
+    # 文章列表
+    reviewList(id: [ID]): [Review]
+    # 收藏文章
+    favoriteReviews(uid: ID): [Review]
+}
+
