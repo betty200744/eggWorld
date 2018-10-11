@@ -4,10 +4,11 @@
 'use strict';
 
 const Service = require('egg').Service;
+const db = require('../model');
 
 class UserService extends Service {
   async userInfo() {
-    return { username: 'betty' };
+    return db.user.findOne();
   }
 }
 
