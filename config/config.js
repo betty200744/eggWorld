@@ -1,4 +1,9 @@
-{
+/**
+ * Created by betty on 10/11/18.
+ */
+"use strict";
+
+module.exports =  {
   "test": {
     "username": "root",
     "password": "1q2w3e4r",
@@ -20,4 +25,4 @@
     "host": "127.0.0.1",
     "dialect": "mysql"
   }
-}
+};
