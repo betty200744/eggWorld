@@ -13,19 +13,8 @@ exports.nunjucks = {
   package: 'egg-view-nunjucks',
 };
 
-/*
-exports.redis = {
-
-};*/
-
 exports.cors = {
   enable: true,
   package: 'egg-cors',
 };
 
-/*
-exports.sequelize = {
-  enable: true,
-  package: 'egg-sequelize',
-};
-*/

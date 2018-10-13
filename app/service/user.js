@@ -10,7 +10,7 @@ const db = require('../model');
  * can use for restful and graphql
  */
 class UserService extends Service {
-  async userInfo() {
+  async userInfo(userId) {
     return db.user.findOne();
   }
 

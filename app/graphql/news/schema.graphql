@@ -1,3 +1,3 @@
-type Review {
+type News {
     title: String
 }

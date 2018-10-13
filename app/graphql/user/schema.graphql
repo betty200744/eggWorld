@@ -1,4 +1,5 @@
-type UserInfo{
+type User{
+    id: Int
     username: String
 }
 

@@ -1,14 +1,9 @@
 type Query {
     # user
-    userInfo: UserInfo
-    # 登录
-    login(phone: String!, password: String!): String
-    # 文章详情
-    reviewDetail (id: ID): Review
+    userInfo(userId: Int): User
     # news列表
-    reviewList(id: [ID]): [Review]
+    hackerNewsList: [News]
     # 收藏news
-    favoriteReviews(uid: ID): [Review]
-
+    favoritesHackerNews(userId: Int): [News]
 }
 

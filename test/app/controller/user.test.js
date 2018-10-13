@@ -16,7 +16,8 @@ describe('app/controler/user.test.js', async () => {
 
   it('userInfo', async () => {
     const query = `query {
-  userInfo{
+  userInfo(userId: 1){
+    id
     username
   }
 }`;

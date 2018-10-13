@@ -8,8 +8,8 @@
  */
 const resolver = {
   Query: {
-    userInfo(root, _, ctx) {
-      return ctx.service.user.userInfo();
+    userInfo(root, {userId}, ctx) {
+      return ctx.service.user.userInfo(userId);
     },
   },
   Mutation: {
